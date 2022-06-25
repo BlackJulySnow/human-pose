@@ -60,6 +60,7 @@ TRAIN:
 TEST:
   BATCH_SIZE: 16
   COCO_BBOX_FILE: 'D:/PycharmProjects/human-pose-estimation.pytorch/data/coco/person_detection_results/COCO_val2017_detections_AP_H_56_person.json'
+#  COCO_BBOX_FILE: '/content/drive/MyDrive/COCO_val2017_detections_AP_H_56_person.json'
   BBOX_THRE: 1.0
   FLIP_TEST: false
   IMAGE_THRE: 0.0
