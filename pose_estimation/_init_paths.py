@@ -18,6 +18,6 @@ def add_path(path):
 
 
 this_dir = osp.dirname(__file__)
-
+sys.path.insert(0, osp.realpath('..'))
 lib_path = osp.join(this_dir, '..', 'lib')
 add_path(lib_path)
