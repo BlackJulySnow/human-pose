@@ -97,7 +97,7 @@ class COCODataset(JointsDataset):
         """ self.root / annotations / person_keypoints_train2017.json """
         prefix = 'person_keypoints' \
             if 'test' not in self.image_set else 'image_info'
-        return os.path.join('D:/PycharmProjects/human-pose-estimation.pytorch/data/coco/', 'annotations',
+        return os.path.join(self.root, 'annotations',
                             prefix + '_' + self.image_set + '.json')
 
     def _load_image_set_index(self):

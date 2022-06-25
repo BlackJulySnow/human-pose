@@ -63,7 +63,7 @@ class JointsDataset(Dataset):
     def __getitem__(self, idx):
         db_rec = copy.deepcopy(self.db[idx])
 
-        image_file = 'D:/PycharmProjects/human-pose-estimation.pytorch/' + db_rec['image']
+        image_file = db_rec['image']
         filename = db_rec['filename'] if 'filename' in db_rec else ''
         imgnum = db_rec['imgnum'] if 'imgnum' in db_rec else ''
 
