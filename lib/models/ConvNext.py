@@ -184,7 +184,7 @@ class ConvNeXtPose(nn.Module):
 
 @register_model
 def convnext_tiny(pretrained=False, in_22k=False, **kwargs):
-    model = ConvNeXt(depths=[3, 3, 9, 3], dims=[48, 96, 192, 384], **kwargs)
+    model = ConvNeXt(depths=[3, 3, 9, 3], dims=[96, 192, 384, 768], **kwargs)
     if pretrained:
         url = model_urls['convnext_tiny_22k'] if in_22k else model_urls['convnext_tiny_1k']
         checkpoint = torch.hub.load_state_dict_from_url(url=url, map_location="cpu", check_hash=True)
@@ -237,8 +237,8 @@ def get_pose_net(cfg, is_train, **kwargs):
     return convnext_tiny()
 
 
-model = get_pose_net(None, False)
-torch.save(model, "model.pth")
+# model = get_pose_net(None, False)
+# torch.save(model, "model.pth")
 # # print(model)
 # x = torch.randn([5, 3, 192, 256])
 # print(x.shape)
