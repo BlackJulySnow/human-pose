@@ -8,7 +8,7 @@ PRINT_FREQ: 100
 DATASET:
   DATASET: 'coco'
   ROOT: 'D:/PycharmProjects/human-pose-estimation.pytorch/data/coco/'
-#  ROOT: '/content/human-pose/data/'
+#  ROOT: '/content/human-pose/data/coco/'
   TEST_SET: 'val2017'
   TRAIN_SET: 'train2017'
   FLIP: true
